@@ -25,7 +25,7 @@ const App = () => {
   }, []);
 
   useEffect(() => {
-    console.log(earthquakeData);
+    // console.log(earthquakeData);
     const map = new mapboxgl.Map({
       container: "map",
       style: "mapbox://styles/mapbox/streets-v11",
