@@ -3,16 +3,18 @@ import axios from "axios";
 import "mapbox-gl/dist/mapbox-gl.css";
 import mapboxgl from "mapbox-gl";
 
+
 mapboxgl.accessToken =
   "pk.eyJ1IjoiYXppemEtMiIsImEiOiJjbGsxaHBuZmYwNmtwM3JwanJsbzVzMmdjIn0.NRZIVsGWCMAclKqpvHMyOg";
   
+
 const App = () => {
   const [earthquakeData, setEarthquakeData] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:4000/display-data");
+        const response = await axios.get("https://earthquakevisuals.onrender.com/display-data");
         setEarthquakeData(response.data.features);
       } catch (error) {
         console.error("Error fetching data:", error);
